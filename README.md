@@ -46,12 +46,12 @@ and treat early.
 
 
 ## Collaborators 合作者
-[Author 1]()
-[Author 2]()
-[Author 3]()
-[Author 4]()
-[Author 5]()
-[DenseAi](https://github.com/denseai) 
+- [Author 1]()
+- [Author 2]()
+- [Author 3]()
+- [Author 4]()
+- [Author 5]()
+- [DenseAi](https://github.com/denseai) 
 
 ## Reference 参考 
 #### 知识图谱
