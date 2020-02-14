@@ -40,11 +40,17 @@ and treat early.
 
 ## 项目计划
 - 知识图谱
-    * 完成病毒百科图谱，包括知识抽取、图形化展示。 2020-02-14 ~ 2020-02- 23
-    * 
-    
+    * 完成病毒百科图谱，包括知识抽取、图形化展示。 2020-02-14 ~ 2020-02-23
+- 病毒分类、宿主预测
+    * 完成病毒预测模型，包括模型训练、WebService服务。 2020-02-14 ~ 2020-02-23
 
-## Author 作者
+
+## Collaborators 合作者
+[Author 1]()
+[Author 2]()
+[Author 3]()
+[Author 4]()
+[Author 5]()
 [DenseAi](https://github.com/denseai) 
 
 ## Reference 参考 
@@ -66,3 +72,5 @@ and infectivity prediction of Wuhan 2019 novel coronavirus using deep learning a
 pneumonia outbreak in humans and its potential bat origin.](https://doi.org/10.1101/2020.01.22.914952)
 - [Randhawa, G., Hill, K. & Kari, L. ML-DSP: Machine Learning with Digital Signal Processing for ultrafast, accurate, 
 and scalable genome classification at all taxonomic levels. BMC Genomics 20, 267 (2019).](https://doi.org/10.1186/s12864-019-5571-y)
+- [Fang, Z., Tan, J., Wu, S., Li, M., Xu, C., Xie, Z., and Zhu, H. (2019). PPR-Meta: a tool for identifying phages and 
+plasmids from metagenomic fragments using deep learning. GigaScience, 8(6), giz066.](https://doi.org/10.1093/gigascience/giz066)
