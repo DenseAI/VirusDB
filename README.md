@@ -62,3 +62,7 @@ and treat early.
 #### 参考文献
 - [Qian Guo, Mo Li, Chunhui Wang, Peihong Wang, Zhencheng Fang, Jie tan, Shufang Wu, Yonghong Xiao, Huaiqiu Zhu. Host 
 and infectivity prediction of Wuhan 2019 novel coronavirus using deep learning algorithm.](https://doi.org/10.1101/2020.01.21.914044)
+- [Peng Zhou, Xing-Lou Yang, Xian-Guang Wang, et al. Discovery of a novel coronavirus associated with the recent 
+pneumonia outbreak in humans and its potential bat origin.](https://doi.org/10.1101/2020.01.22.914952)
+- [Randhawa, G., Hill, K. & Kari, L. ML-DSP: Machine Learning with Digital Signal Processing for ultrafast, accurate, 
+and scalable genome classification at all taxonomic levels. BMC Genomics 20, 267 (2019).](https://doi.org/10.1186/s12864-019-5571-y)
