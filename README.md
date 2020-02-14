@@ -43,6 +43,9 @@ Virus AI platform
 - [lingyeyouming](https://github.com/lingyeyouming)
 - [DenseAi](https://github.com/denseai) 
 
+## Thanks 致谢
+
+
 ## Reference 参考 
 #### 知识图谱
 - [OpenKG 新冠百科图谱](http://www.openkg.cn/dataset/2019-ncov-baike)
@@ -54,6 +57,7 @@ Virus AI platform
 
 #### 深度学习
 - [kpot/keras-transformer](https://github.com/kpot/keras-transformer)
+- [cerebroai/reformers](https://github.com/cerebroai/reformers)
 
 #### 参考文献
 - [Qian Guo, Mo Li, Chunhui Wang, Peihong Wang, Zhencheng Fang, Jie tan, Shufang Wu, Yonghong Xiao, Huaiqiu Zhu. Host 
@@ -64,3 +68,4 @@ pneumonia outbreak in humans and its potential bat origin.](https://doi.org/10.1
 and scalable genome classification at all taxonomic levels. BMC Genomics 20, 267 (2019).](https://doi.org/10.1186/s12864-019-5571-y)
 - [Fang, Z., Tan, J., Wu, S., Li, M., Xu, C., Xie, Z., and Zhu, H. (2019). PPR-Meta: a tool for identifying phages and 
 plasmids from metagenomic fragments using deep learning. GigaScience, 8(6), giz066.](https://doi.org/10.1093/gigascience/giz066)
+- [Nikita Kitaev, Łukasz Kaiser, Anselm Levskaya. Reformer: The Efficient Transformer](https://arxiv.org/abs/2001.04451)
