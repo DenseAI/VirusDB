@@ -47,7 +47,7 @@ and treat early.
 
 ## Collaborators 合作者
 - [xuziyao26](https://github.com/xuziyao26)
-- [Author 2]()
+- [lingyeyouming](https://github.com/lingyeyouming)
 - [Author 3]()
 - [Author 4]()
 - [Author 5]()

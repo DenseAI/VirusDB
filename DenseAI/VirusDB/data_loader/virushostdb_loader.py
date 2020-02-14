@@ -33,7 +33,42 @@ def _parse_db_text(file_name: str, word_index_from=5, label_index_from=3, lower=
             # Replace '\n'
             if len(line) > 0:
                 line = line[:-1]
-            print(line)
+
+            # virus tax id,
+            # virus name,
+            # virus lineage,
+            # refseq id,
+            # KEGG GENOME,
+            # KEGG DISEASE,
+            # DISEASE
+            # host tax id
+            # host name
+            # host lineage
+            # pmid
+            # evidence
+            # sample type
+            # source organism
+            # 存在 一个 virus tax id 对多个 refseq id 和 对个 host tax id的场景
+            tokens = line.split(sent_delimiter)
+            if len(tokens) < 14:
+                continue
+
+            virus_tax_id = tokens[0]
+
+            refseq_ids = tokens[3]
+            refseq_tokens = refseq_ids.split(',')
+            if refseq_tokens is None or len(refseq_tokens) == 0:
+                continue
+
+            host_tax_id = tokens[7]
+
+            for refseq in refseq_tokens:
+
+            print('virus_tax_id ', virus_tax_id)
+            print('refseq_ids ', refseq_tokens)
+            print('host_tax_id ', host_tax_id)
+
+            #print(line)
             index += 1
     except Exception as e:
         logging.error(e)
