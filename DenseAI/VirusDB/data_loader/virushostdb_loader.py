@@ -17,9 +17,11 @@ def _parse_db_text(file_name: str, word_index_from=5, label_index_from=3, lower=
     """
     parse virushostdb.tsv
     """
+
+    virus_entities = []
     if os.path.exists(file_name) is False:
         logging.error("File is not exists: {}".format(file_name))
-        return
+        return virus_entities
 
     try:
         file = open(file_name, 'r', encoding="utf-8")
@@ -63,15 +65,22 @@ def _parse_db_text(file_name: str, word_index_from=5, label_index_from=3, lower=
             host_tax_id = tokens[7]
 
             for refseq in refseq_tokens:
-
-            print('virus_tax_id ', virus_tax_id)
-            print('refseq_ids ', refseq_tokens)
-            print('host_tax_id ', host_tax_id)
+                virus_entity = {}
+                virus_entity['virus_tax_id'] = virus_tax_id
+                virus_entity['virus name'] = tokens[1]
+                virus_entity['refseq_id'] = refseq
+                virus_entity['host_tax_id'] = host_tax_id
+                virus_entity['host name'] = tokens[8]
+                virus_entities.append(virus_entity)
+                print(virus_entity)
+                print()
 
             #print(line)
             index += 1
     except Exception as e:
         logging.error(e)
+
+    return virus_entities
 
 
 def _parse_text(file_name: str, word_index_from=5, label_index_from=3, lower=True, sent_delimiter='\t'):
