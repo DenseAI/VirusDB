@@ -13,7 +13,7 @@ import keras.activations as activations
 from keras import backend as K
 from keras.utils import get_custom_objects
 
-from kaitian.transformer.attention import MultiHeadSelfAttention
+from DenseAI.VirusDB.transformer.attention import MultiHeadSelfAttention
 
 
 def gelu(x):

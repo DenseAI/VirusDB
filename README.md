@@ -41,6 +41,7 @@ Virus AI platform
 ## Collaborators 合作者
 - [xuziyao26](https://github.com/xuziyao26)
 - [lingyeyouming](https://github.com/lingyeyouming)
+- [AllenZqy](https://github.com/AllenZqy)
 - [DenseAi](https://github.com/denseai) 
 
 ## Thanks 致谢
