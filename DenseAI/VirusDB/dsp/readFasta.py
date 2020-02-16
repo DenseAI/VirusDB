@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import numpy as np
-import scipy.io as sio
+# import scipy.io as sio
 import os
 import h5py
 
@@ -62,11 +62,27 @@ def readFasta(dataSet:str):
 
 
 
-if __name__ == '__main__':
-    dataset = '/home/huanghaiping/Research/Software/MLDSP-master/DataBase/Primates.mat'
-    AcNmb, Seq, numberOfClusters, clusterNames, pointsPerCluster = readFasta(dataset)
-    # print(AcNmb)
-    # print(Seq)
-    print(numberOfClusters)
-    print(clusterNames)
-    print(pointsPerCluster)
+# if __name__ == '__main__':
+#     # dataset = '/home/huanghaiping/Research/Software/MLDSP-master/DataBase/Primates.mat'
+#     # AcNmb, Seq, numberOfClusters, clusterNames, pointsPerCluster = readFasta(dataset)
+#     # # print(AcNmb)
+#     # # print(Seq)
+#     # print(numberOfClusters)
+#     # print(clusterNames)
+#     # print(pointsPerCluster)
+#
+#     #from skbio.core.distance import DistanceMatrix
+#     from skbio.stats.distance import DissimilarityMatrix
+#     import numpy as np
+#
+#     data = np.array([[0.0, 0.5, 1.0],
+#                      [0.5, 0.0, 0.75],
+#                      [1.0, 0.75, 0.0]])
+#     ids = ["a", "b", "c"]
+#     dm_from_np = DissimilarityMatrix(data, ids)
+#     print(dm_from_np)
+#
+#     dm_from_np = np.corrcoef(data)
+#     print(dm_from_np)
+#     D = (1 - dm_from_np)/2;
+#     print(D)
