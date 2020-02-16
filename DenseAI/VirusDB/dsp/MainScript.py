@@ -3,6 +3,8 @@
 import numpy as np
 from scipy.fftpack import fft,ifft
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn import svm
 
 from DenseAI.VirusDB.dsp.readFasta import readFasta
 from DenseAI.VirusDB.dsp.numMapping import numMappingPP
@@ -37,6 +39,13 @@ def _pad_sequences(maxlen, seq, pad_x=0):
     return np.array(pads_x)
 
 
+def classificationCode(disMat, labels, folds=0, totalSeq=0):
+    X_train, X_test, y_train, y_test = train_test_split(disMat, labels, test_size = 0.2, random_state = 0)
+    clf = svm.SVC(kernel='linear', C=1).fit(X_train, y_train)
+    scores = cross_val_score(clf, X_train, y_train, cv=5)
+    print("scores: ", scores)
+
+
 def main(dataset:str):
     AcNmb, Seq, numberOfClusters, clusterNames, pointsPerCluster = readFasta(dataset)
     max_len, min_len, mean_len, med_len = lengthCalc(Seq)
@@ -57,16 +66,24 @@ def main(dataset:str):
     seq_fft = np.array(seq_fft)
     seq_lg = np.array(seq_lg)
 
-    plt.subplot(221)
-    for ii in range(1):
-        plt.plot(seq_lg[ii][10:250])
+    # plt.subplot(221)
+    # for ii in range(1):
+    #     plt.plot(seq_lg[ii][10:250])
+    #
+    # for ii in range(1):
+    #     plt.plot(seq_lg[100+ii][10:250])
+    # plt.title('Original wave')
+    # plt.show()
 
-    for ii in range(1):
-        plt.plot(seq_lg[100+ii][10:250])
-    plt.title('Original wave')
-    plt.show()
+    labels = []
 
+    print("numberOfClusters: ", numberOfClusters)
+    for ii in range( int(numberOfClusters) ):
+        for jj in range( int(pointsPerCluster[ii])):
+            labels.append(ii)
+    labels = np.array(labels)
 
+    classificationCode(seq_lg, labels)
 
     print(max_len, min_len, mean_len, med_len)
 
