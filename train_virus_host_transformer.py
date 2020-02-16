@@ -57,6 +57,8 @@ EPOCH_SEC_LEN = 30  # seconds
 SAMPLING_RATE = 256
 
 
+#sudo cp /usr/local/cuda-10.0/lib64/libcudnn.so.7 /usr/local/lib/libcudnn.so.7 && sudo ldconfigs
+
 if __name__ == '__main__':
     model_name = "virus_host_transformer_6gram_6step"
     config_save_path = "./data/{}_default_config.json".format(model_name)  # config path
@@ -64,10 +66,10 @@ if __name__ == '__main__':
     word_dict_path = "./data/{}_word_dict.json".format(model_name)  # 目标字典路径
     label_dict_path = "./data/{}_label_dict.json".format(model_name)  # 目标字典路径
 
-    batch_size = 32
+    batch_size = 16
     epochs = 150
     num_gpu = 1
-    max_seq_len = 150
+    max_seq_len = 3000
     initial_epoch = 0
     load = False
 
@@ -78,7 +80,7 @@ if __name__ == '__main__':
 
 
     train_paths = [
-        "E:\\Research\\Medical\\Data\\virus_host_db.txt",
+        "/home/huanghaiping/Research/Medical/Data/virus_host_db.txt",
     ]
 
     (x_train, y_train), (_, _),  (_, _), max_features, max_labels, word_dict, label_dict = prepare_data(train_paths, max_seq_len=max_seq_len, padding=True)

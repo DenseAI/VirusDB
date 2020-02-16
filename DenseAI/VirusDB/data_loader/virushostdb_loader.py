@@ -166,17 +166,17 @@ if __name__ == '__main__':
         # "E:\\Research\Corpus\\people_1998_train_bies",
     ]
 
-    virushostdb_file = 'D:\\迅雷下载\\VirusHostDb\\virushostdb.tsv'
+    virushostdb_file = '/home/huanghaiping/Research/Medical/VirusHostDb/virushostdb.tsv'
     virus_entities, refseq_set = _parse_db_text(virushostdb_file)
 
-    virus_genomic_file = 'D:\\迅雷下载\\VirusHostDb\\virushostdb.formatted.genomic.fna'
+    virus_genomic_file = '/home/huanghaiping/Research/Medical/VirusHostDb/virushostdb.formatted.genomic.fna'
     refset_entities = _parse_genomic_text(virus_genomic_file, refseq_set=refseq_set)
 
     print(len(refset_entities))
 
     seq_lens = []
 
-    output_file = 'E:\\Research\\Medical\\Data\\virus_host_db.txt'
+    output_file = '/home/huanghaiping/Research/Medical/Data/virus_host_db.txt'
     with open(output_file, "w") as fh:
         for virus_entity in virus_entities:
             refseq_id = virus_entity['refseq_id']

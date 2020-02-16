@@ -70,3 +70,8 @@ and scalable genome classification at all taxonomic levels. BMC Genomics 20, 267
 - [Fang, Z., Tan, J., Wu, S., Li, M., Xu, C., Xie, Z., and Zhu, H. (2019). PPR-Meta: a tool for identifying phages and 
 plasmids from metagenomic fragments using deep learning. GigaScience, 8(6), giz066.](https://doi.org/10.1093/gigascience/giz066)
 - [Nikita Kitaev, Łukasz Kaiser, Anselm Levskaya. Reformer: The Efficient Transformer](https://arxiv.org/abs/2001.04451)
+- [David R. Kelley, Yakir A. Reshef. Sequential regulatory activity prediction across chromosomes with convolutional neural networks.
+bioRxiv 161851;](https://doi.org/10.1101/161851)
+- [Gurjit S. Randhawa, Maximillian P.M. Soltysiak, Hadi El Roz, Camila P.E. de Souza, Kathleen A. Hill, Lila Kari. 
+Machine learning analysis of genomic signatures provides evidence of associations between Wuhan 2019-nCoV and bat betacoronaviruses. 
+bioRxiv 2020.02.03.932350;](https://www.biorxiv.org/content/10.1101/2020.02.03.932350v2.full)
