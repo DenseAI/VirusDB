@@ -55,10 +55,13 @@ Virus AI platform
 
 #### 病毒、基因、药物
 - [Virus-Host DB](https://www.genome.jp/virushostdb)
+- [grandhawa/MLDSP](https://github.com/grandhawa/MLDSP)
+- [calico/basenji](https://github.com/calico/basenji/tree/master/basenji)
 
 #### 深度学习
 - [kpot/keras-transformer](https://github.com/kpot/keras-transformer)
-- [cerebroai/reformers](https://github.com/cerebroai/reformers)
+- [google/trax](https://github.com/google/trax)
+
 
 #### 参考文献
 - [Qian Guo, Mo Li, Chunhui Wang, Peihong Wang, Zhencheng Fang, Jie tan, Shufang Wu, Yonghong Xiao, Huaiqiu Zhu. Host 
