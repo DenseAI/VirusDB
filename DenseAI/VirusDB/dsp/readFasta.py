@@ -62,14 +62,15 @@ def readFasta(dataSet:str):
 
 
 
-# if __name__ == '__main__':
-#     # dataset = '/home/huanghaiping/Research/Software/MLDSP-master/DataBase/Primates.mat'
-#     # AcNmb, Seq, numberOfClusters, clusterNames, pointsPerCluster = readFasta(dataset)
-#     # # print(AcNmb)
-#     # # print(Seq)
-#     # print(numberOfClusters)
-#     # print(clusterNames)
-#     # print(pointsPerCluster)
+if __name__ == '__main__':
+    dataset = '/home/huanghaiping/Research/Software/MLDSP-master/DataBase/Primates.mat'
+    dataset = 'E:\\Research\\Software\\MLDSP-master\\DataBase\\Primates.mat'
+    AcNmb, Seq, numberOfClusters, clusterNames, pointsPerCluster = readFasta(dataset)
+    # print(AcNmb)
+    # print(Seq)
+    print(numberOfClusters)
+    print(clusterNames)
+    print(pointsPerCluster)
 #
 #     #from skbio.core.distance import DistanceMatrix
 #     from skbio.stats.distance import DissimilarityMatrix
