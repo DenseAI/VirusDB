@@ -54,9 +54,17 @@ Virus AI platform
 - [OpenKG 新冠临床图谱](http://www.openkg.cn/dataset/2019-ncov-clinic)
 
 #### 病毒、基因、药物
-- [Virus-Host DB](https://www.genome.jp/virushostdb)
-- [grandhawa/MLDSP](https://github.com/grandhawa/MLDSP)
+- [Virus-Host DB](https://www.genome.jp/virushostdb) Virus-Host DB organizes data about the relationships between viruses and their hosts
+- [NCBI Viral Genome Data](ftp://ftp.ncbi.nlm.nih.gov/refseq/release/viral/)
+- [UniProt](https://www.uniprot.org/)
+- [ViralZone](https://viralzone.expasy.org/) The mission of UniProt is to provide the scientific community with a comprehensive,
+high-quality and freely accessible resource of protein sequence and functional information.
+- [ Virus Pathogen Resource (VIPR) database ](https://www.viprbrc.org/)
+- [2019新型冠状病毒信息库](https://bigd.big.ac.cn/ncov)
+- [grandhawa/MLDSP](https://github.com/grandhawa/MLDSP) Machine Learning with Digital Signal Processing for ultrafast,
+accurate, and scalable genome classfication at all taxonomic levels
 - [calico/basenji](https://github.com/calico/basenji/tree/master/basenji)
+- [Genome Detective Coronavirus Typing Tool](https://www.genomedetective.com/app/typingtool/cov/)
 
 #### 深度学习
 - [kpot/keras-transformer](https://github.com/kpot/keras-transformer)

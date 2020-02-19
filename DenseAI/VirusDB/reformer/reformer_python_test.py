@@ -17,10 +17,10 @@ model = ReformerLM(
     weight_tie = False,   # tie parameters of each layer for no memory per additional depth
     attn_chunks = 8,        # process lsh attention in chunks, only way for memory to fit when scaling to 16k tokens
     use_full_attn = False   # use full self attention, for comparison
-).cuda()
+)#.cuda()
 
 print("X: ")
-x = torch.randint(0, 10000, (1, seq_len)).long().cuda()
+x = torch.randint(0, 10000, (1, seq_len)).long()#.cuda()
 
 print("Y")
 y = model(x)
