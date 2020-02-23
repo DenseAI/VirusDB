@@ -14,8 +14,8 @@ import json
 
 
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
-tokenizer.max_len = 12800
+tokenizer = BertTokenizer.from_pretrained('/home/huanghaiping/Research/Data/cased_L-12_H-768_A-12/')
+tokenizer.max_len = 3072
 
 model = ReformerLM(
     num_tokens=tokenizer.vocab_size,
@@ -29,10 +29,21 @@ model = ReformerLM(
 test = 'Hello, my dog is cute'
 
 tok = tokenizer.encode(test, max_length=tokenizer.max_len, add_special_tokens=True)
-tok = torch.tensor(tok, dtype=torch.long)
-tok.shape
 
-tokenizer.decode(tok)
+print("tok: ", tok)
+tokens = []
+for ii in range(32):
+    tokens.append(tok)
+
+# tok = np.array(tokens)
+tok = torch.tensor(tok, dtype=torch.long)
+
+
+
+
+print(tokens)
+
+# tokenizer.decode(tok)
 
 
 def mask_tokens(inputs: torch.Tensor, tokenizer, mlm_probability=0.15, pad=True):
@@ -44,9 +55,9 @@ def mask_tokens(inputs: torch.Tensor, tokenizer, mlm_probability=0.15, pad=True)
         tokenizer.get_special_tokens_mask(val, already_has_special_tokens=True) for val in labels.tolist()
     ]
 
-    print("special_tokens_mask: ", special_tokens_mask)
-    print(torch.tensor(special_tokens_mask, dtype=torch.bool).byte())
-    probability_matrix.masked_fill_(torch.tensor(special_tokens_mask, dtype=torch.bool).byte(), value=0.0)
+    # print("special_tokens_mask: ", special_tokens_mask)
+    # print(torch.tensor(special_tokens_mask).byte())
+    probability_matrix.masked_fill_(torch.tensor(special_tokens_mask).byte(), value=0.0)
     if tokenizer._pad_token is not None:
         padding_mask = labels.eq(tokenizer.pad_token_id)
         probability_matrix.masked_fill_(padding_mask, value=0.0)
@@ -62,22 +73,32 @@ def mask_tokens(inputs: torch.Tensor, tokenizer, mlm_probability=0.15, pad=True)
     random_words = torch.randint(len(tokenizer), labels.shape, dtype=torch.long)
     inputs[indices_random] = random_words[indices_random]
 
+    inputs_list = []
+    labels_list = []
+
     if pad:
         input_pads = tokenizer.max_len - inputs.shape[-1]
         label_pads = tokenizer.max_len - labels.shape[-1]
 
+
         inputs = F.pad(inputs, pad=(0, input_pads), value=tokenizer.pad_token_id)
         labels = F.pad(labels, pad=(0, label_pads), value=tokenizer.pad_token_id)
 
+        # for ii in range(32):
+        #     inputs_list.append(inputs)
+        #     labels_list.append(labels)
+
     # The rest of the time (10% of the time) we keep the masked input tokens unchanged
+    # print("inputs: ", inputs)
+    # torch.tensor()
     return inputs, labels
 
 
 inputs, labels = mask_tokens(tok.unsqueeze(0), tokenizer, pad=True)
 
-tokenizer.decode(inputs.squeeze(0))
-
-tokenizer.decode(labels.squeeze(0))
+# tokenizer.decode(inputs.squeeze(0))
+#
+# tokenizer.decode(labels.squeeze(0))
 
 pred = model(inputs)
 pred.shape
@@ -100,7 +121,7 @@ labels = labels.to(device)
 loss = []
 optimizer = AdamW(params=model.parameters())
 
-for _ in tqdm(range(100)):
+for _ in tqdm(range(100000)):
     pred = model(inputs)
     mlm_loss = loss_fn(pred.view(-1, tokenizer.vocab_size), labels.view(-1))
 

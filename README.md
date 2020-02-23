@@ -33,9 +33,9 @@ Virus AI platform
 
 ## 项目计划
 - 知识图谱
-    * 完成病毒百科图谱，包括知识抽取、图形化展示。 2020-02-14 ~ 2020-02-23
+    * 完成病毒百科图谱，包括知识抽取、图形化展示。 2020-02-14 ~ 2020-03-23
 - 病毒分类、宿主预测
-    * 完成病毒预测模型，包括模型训练、WebService服务。 2020-02-14 ~ 2020-02-23
+    * 完成病毒预测模型，包括模型训练、WebService服务。 2020-02-14 ~ 2020-03-23
 
 
 ## Collaborators 合作者
@@ -61,6 +61,8 @@ Virus AI platform
 high-quality and freely accessible resource of protein sequence and functional information.
 - [ Virus Pathogen Resource (VIPR) database ](https://www.viprbrc.org/)
 - [2019新型冠状病毒信息库](https://bigd.big.ac.cn/ncov)
+- [冠状病毒基因组、蛋白组分析平台](http://covdb.popgenetics.net/v1/index)
+- [The Immune Epitope Database](https://www.iedb.org/database_export_v3.php)
 - [grandhawa/MLDSP](https://github.com/grandhawa/MLDSP) Machine Learning with Digital Signal Processing for ultrafast,
 accurate, and scalable genome classfication at all taxonomic levels
 - [calico/basenji](https://github.com/calico/basenji/tree/master/basenji)
